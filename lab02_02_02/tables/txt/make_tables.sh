@@ -1,4 +1,5 @@
 #!/bin/bash
+javac *.java
 
 for i in *.txt
 do
