@@ -14,4 +14,4 @@ pdflatex all.tex
 
 mkdir ready
 
-cp all.pdf ready/$1.pdf
+cp all.pdf "ready/$1.pdf"
