@@ -1,9 +1,9 @@
 #!/bin/bash
 #~ latex all.tex
-#~ pushd tables/txt
-#~ ./make_tables.sh
-#~ popd
-#~ 
+pushd tables/txt
+bash ./make_tables.sh
+popd
+
 pushd pics
 ./r.sh
 popd
