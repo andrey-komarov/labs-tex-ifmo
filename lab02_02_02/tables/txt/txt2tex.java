@@ -13,14 +13,14 @@ public class txt2tex implements Runnable {
 
 	public String nextToken() throws IOException {
 		while (in == null || !in.hasMoreTokens()) {
-			if (in != null){
+			if ((in != null)){
 				out.println("\\\\");
 				out.println("\\hline");
 			}
 			String ss = br.readLine();
 			if (ss == null)
 				ss = " ";
-			in = new StringTokenizer(ss);
+			in = new StringTokenizer(ss, "\t");
 			if (ss == " "){
 				fl = true;
 				break;
@@ -46,7 +46,7 @@ public class txt2tex implements Runnable {
 
 	public void solve() throws IOException {
 		String s = "1";
-		in = new StringTokenizer(br.readLine());
+		in = new StringTokenizer(br.readLine(), "\t");
 		out.print("\\begin{tabular}{|");
 		for (int i = 0; i < in.countTokens(); i++){
 			out.print("c|");
@@ -61,6 +61,7 @@ public class txt2tex implements Runnable {
 			if (in.hasMoreTokens())
 				out.print(" & ");
 		}
+		out.println("\\hline");
 		out.println("\\end{tabular}");
 		out.println("\\par");
 	}
