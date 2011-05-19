@@ -6,7 +6,7 @@ EPS_DIR=./eps
 PDF_DIR=./pdf
 PNG_DIR=./png
 TMP_FILE=tmp
-RESOLUTION=10
+RESOLUTION=1000
  
 if [[ "$@" == ""]];
 then
