@@ -1,5 +1,5 @@
 #!/bin/bash
-javac *.java
+javac txt2tex.java
 
 for i in *.txt
 do
